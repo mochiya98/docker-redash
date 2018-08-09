@@ -1,5 +1,16 @@
 # Docker-redash
 
+## Alternative for limited-filesystem
+一部機能に制約のあるファイルシステムにcloneしている場合や、  
+特殊なDockerホストを利用している場合向けのforkです  
+幾つかの問題を解決してくれる、かもしれません  
+~~具体的にはVM上でDocker動かしてる時とか、Windowsでどうにかしている時とか。~~  
+**fork元とは挙動が変わってきます。自己責任でご利用下さい。**  
+## 変更点
+- **postgres-dataがコンテナ内に展開されるようになります**
+	- 中身見たい時はdocker内にbash飛ばして何とかして下さい
+- **InnoDBの"Linux Native AIO"が無効化されます**
+
 ## Mysql + Redash on Docker
 
 ### 準備
